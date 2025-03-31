@@ -1,4 +1,4 @@
-import { Product } from "src/products/entities/product.entity";
+import { Product } from "../../products/entities/product.entity";
 import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 
@@ -11,6 +11,12 @@ export class Transaction {
 
     @Column('decimal')
     total:number
+
+    @Column({type: 'varchar', length: 30, nullable: true})
+    coupon: string
+
+    @Column({type: 'decimal', default:0 ,nullable:true})
+    discount: number
 
     @Column({type: 'timestamp', default: () =>  'CURRENT_TIMESTAMP(6)' })
     transactionDate: Date
