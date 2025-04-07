@@ -19,7 +19,7 @@ export class ProductsController {
 
     const category = query.category_id ? query.category_id : undefined
     const take = query.take ? query.take: 10
-    const skip = query.skip ? query.take: 0
+    const skip = query.skip ? query.skip: 0
 
     return this.productsService.findAll( take, skip, category);
   }
