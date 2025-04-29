@@ -14,4 +14,4 @@ async function bootstrap() {
   app.useStaticAssets(join(__dirname, '../public'))
   await app.listen(port);
 }
-bootstrap();
+bootstrap(); 
